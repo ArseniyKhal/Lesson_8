@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson 8 - Курс Зима 2022</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<header class="header">
+				<h1>Урок №8. Домашняя работа</h1>
+			</header>
+			<main>
+				<nav>
+					<ul>
+						<li><a href="#psevdo-sost">Псевдоклассы состояния</a>
+							<ul>
+								<li><a href="#hover">:hover</a></li>
+								<li><a href="#active">:active</a></li>
+								<li><a href="#visited">:visited</a></li>
+								<li><a href="#focus">:focus</a></li>
+								<li><a href="#target">:target</a></li>
+							</ul>
+						</li>
+						<li><a href="#psevdo-vkod">Псевдоклассы положения в коде</a>
+							<ul>
+								<li><a href="#cube-fc">:first-child</a></li>
+								<li><a href="#cube-lc">:last-child</a></li>
+								<li><a href="#cube-ft">:first-of-type</a></li>
+								<li><a href="#cube-lt">:last-of-type</a></li>
+								<li><a href="#cube-nc">:nth-child</a></li>
+								<li><a href="#cube-ntc">:nth-of-type</a></li>
+							</ul>
+						</li>
+						<li><a href="#psevdo-item">Псевдоэлементы</a>
+							<ul>
+								<li><a href="#example-fline">::first-line</a></li>
+								<li><a href="#example-fletter">::first-letter</a></li>
+								<li><a href="#before-card">::before</a></li>
+								<li><a href="#after-card">::after</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<h2 id="psevdo-sost">Псевдоклассы состояния</h2>
+				<div class="hover-card">
+					<p>
+						<span id="hover">:hover</span> - cрабатывает при наведении на элемент, часто применяется применяется
+						как для
+						ссылок так и для любого другого элемента.
+					</p>
+					<div class="block1 hover">Блок 1</div>
+					<div class="block2 hover">Блок 2</div>
+					<div class="block3 hover">Блок 3</div>
+				</div>
+				<div class="active-card">
+					<p>
+						<span id="active">:active</span> - срабатывает при нажатии на элемент. В основном применяется к
+						ссылкам и кнопкам.
+					</p>
+					<div class="block1 active">Блок 1</div>
+					<div class="block2 active">Блок 2</div>
+					<div class="block3 active">Блок 3</div>
+				</div>
+				<div class="visited-card">
+					<p>
+						<span id="visited">:visited</span> - срабатывает для посещенных ссылок. Из-за причин приватности,
+						браузеры строго ограничивают стили, которые вы можете применить к
+						элементу, используя этот псевдо-класс: только color, background-color, border-color,
+						border-bottom-color, border-left-color, border-right-color, border-top-color, outline-color,
+						column-rule-color, fill и
+						stroke. Заметьте также, что альфа-канал будет игнорироваться: будет использоваться альфа-канал,
+						используемый
+						для непосещённых ссылок вместо него (но если прозрачность - 0, то в этот случае игнорируется весь
+						цвет, и
+						один из используемых стилей для непосещённых ссылок)
+					</p>
+					<a class="block1 visited" href="#hover">Блок 1</a>
+					<a class="block2 visited" href="#active">Блок 2</a>
+					<a class="block3 visited" href="#visited">Блок 3</a>
+				</div>
+				<div class="focus-card">
+					<p>
+						<span id="focus">:focus</span> - cрабатывает при получении элементом фокуса. Часто применяется к
+						элементам форм. Например
+						input.
+					</p>
+					<a class="block1 focus" href="#">Блок 1</a>
+					<a class="block2 focus" href="#">Блок 2</a>
+					<a class="block3 focus" href="#">Блок 3</a>
+				</div>
+				<div class="target-card">
+					<p>
+						<span id="target">:target</span> - срабатывает когда элемент является объектом на который ссылаются.
+					</p>
+					<a id="block-blue" class="block1 target" href="#block-yellow">Блок 1</a>
+					<a id="block-yellow" class="block2 target" href="#block-violet">Блок 2</a>
+					<a id="block-violet" class="block3 target" href="#block-blue">Блок 3</a>
+				</div>
+				<h2 id="psevdo-vkod">Псевдоклассы положения в коде</h2>
+				<div class="first-child-card">
+					<p>
+						<span id="cube-fc">:first-child</span> - обращение к первому элементу в блоке
+					</p>
+					<div class="cube-fc">
+						<span id="notdiv">я span</span>
+						<div class="cube">Блок 1</div>
+						<div class="cube">Блок 2</div>
+						<div class="cube">Блок 3</div>
+						<div class="cube">Блок 4</div>
+						<div class="cube">Блок 5</div>
+						<div class="cube">Блок 6</div>
+						<div class="cube">Блок 7</div>
+						<div class="cube">Блок 8</div>
+					</div>
+				</div>
+				<div class="last-child-card">
+					<p>
+						<span id="cube-lc">:last-child</span> - обращение к последнему элементу в блоке
+					</p>
+					<div class="cube-lc">
+						<span id="notdiv">я span</span>
+						<div class="cube">Блок 1</div>
+						<div class="cube">Блок 2</div>
+						<div class="cube">Блок 3</div>
+						<div class="cube">Блок 4</div>
+						<div class="cube">Блок 5</div>
+						<div class="cube">Блок 6</div>
+						<div class="cube">Блок 7</div>
+						<div class="cube">Блок 8</div>
+					</div>
+				</div>
+				<div class="first-child-type-card">
+					<p>
+						<span id="cube-ft">:first-of-type</span> - обращение к первому элементу в блоке определенного
+						типа
+					</p>
+					<div class="cube-ft">
+						<span id="notdiv">я span</span>
+						<img src="img/smail.webp" alt="pic">
+						<div class="cube">Блок 1</div>
+						<div class="cube">Блок 2</div>
+						<div class="cube">Блок 3</div>
+						<div class="cube">Блок 4</div>
+						<div class="cube">Блок 5</div>
+						<div class="cube">Блок 6</div>
+						<div class="cube">Блок 7</div>
+					</div>
+				</div>
+				<div class="last-child-type-card">
+					<p>
+						<span id="cube-lt">:last-of-type</span> - обращение к первому элементу в блоке определенного
+						типа
+					</p>
+					<div class="cube-lt">
+						<div class="cube">Блок 1</div>
+						<div class="cube">Блок 2</div>
+						<div class="cube">Блок 3</div>
+						<div class="cube">Блок 4</div>
+						<div class="cube">Блок 5</div>
+						<div class="cube">Блок 6</div>
+						<div class="cube">Блок 7</div>
+						<span id="notdiv">я span</span>
+						<img src="img/smail.webp" alt="pic">
+					</div>
+				</div>
+				<div class="nth-child-card">
+					<p>
+						<span id="cube-nc">:nth-child(порядковый номер элемента)</span> - обращение к конкретным элементам в
+						блоке
+					</p>
+					<div class="cube-nc">
+						<div class="cube">Блок 1</div>
+						<div class="cube">Блок 2</div>
+						<div class="cube">Блок 3</div>
+						<div class="cube">Блок 4</div>
+						<div class="cube">Блок 5</div>
+						<div class="cube">Блок 6</div>
+						<div class="cube">Блок 7</div>
+						<div class="cube">Блок 8</div>
+					</div>
+				</div>
+				<div class="nth-child-card">
+					<p>
+						<span>:nth-child(odd)</span> - обращение к нечётными номерами элементов в
+						блоке
+					</p>
+					<div class="cube-nodc">
+						<div class="cube">Блок 1</div>
+						<div class="cube">Блок 2</div>
+						<div class="cube">Блок 3</div>
+						<div class="cube">Блок 4</div>
+						<div class="cube">Блок 5</div>
+						<div class="cube">Блок 6</div>
+						<div class="cube">Блок 7</div>
+						<div class="cube">Блок 8</div>
+					</div>
+				</div>
+				<div class="nth-child-card">
+					<p>
+						<span>:nth-child(even)</span> - обращение к чётными номерами элементов в
+						блоке
+					</p>
+					<div class="cube-nevc">
+						<div class="cube">Блок 1</div>
+						<div class="cube">Блок 2</div>
+						<div class="cube">Блок 3</div>
+						<div class="cube">Блок 4</div>
+						<div class="cube">Блок 5</div>
+						<div class="cube">Блок 6</div>
+						<div class="cube">Блок 7</div>
+						<div class="cube">Блок 8</div>
+					</div>
+				</div>
+				<div class="nth-child-card">
+					<p>
+						<span id="cube-ntc">:nth-of-type()</span> - обращение к конкретным элементам в блоке по типу
+					</p>
+					<div class="cube-ntc">
+						<span id="notdiv">я span</span>
+						<img src="img/smail.webp" alt="pic">
+						<div class="cube">Блок 1</div>
+						<div class="cube">Блок 2</div>
+						<div class="cube">Блок 3</div>
+						<div class="cube">Блок 4</div>
+						<div class="cube">Блок 5</div>
+						<div class="cube">Блок 6</div>
+						<div class="cube">Блок 7</div>
+					</div>
+				</div>
+				<h2 id="psevdo-item">Псевдоэлементы</h2>
+				<p class="text">Псевдоэлементы – это селекторы, которые определяют область элементов, которая изначально
+					отсутствует в дереве документа. Эта область создается искусственно с помощью CSS.
+				</p>
+
+				<p class="example-fline">
+					<span id="item-fline">::first-line</span> - задает стиль первой строки форматированного текста. Длина
+					этой
+					строки зависит от многих факторов, таких как используемый шрифт, размер окна браузера, ширина блока,
+					языка и т.д. В правилах стиля допустимо использовать только свойства, относящиеся к шрифту, изменению
+					цвета текста и фона.
+				</p>
+				<p class="example-fletter">
+					<span id="item-fletter">::first-letter</span> - определяет стиль первого символа в тексте элемента,к
+					которому добавляется.
+					К этому псевдоэлементу могут применяться только стилевые свойства, связанные со свойствами шрифта,
+					полями, отступами, границами, цветом и фоном.
+				</p>
+				<div class="before-card">
+					<p>
+						<span id="example-before">::before</span> - применяется для отображения желаемого контента до
+						содержимого элемента, к которому он добавляется. Работает совместно со свойством content.
+					</p>
+				</div>
+				<div class="after-card">
+					<p>
+						<span id="example-after">::after</span> - применяется для отображения желаемого контента после
+						содержимого элемента, к которому он добавляется. Работает совместно со свойством content.
+					</p>
+				</div>
+			</main>
+			<footer class="footer">
+				<a href="https://arseniykhal.github.io/Lesson_8/index_page2.html" class="button">Страница №2 Верстаем
+					части макета OnlineCourse, MatoaWebsiteRedesign</a>
+			</footer>
+		</div>
+	</div>
+</body>
+
+</html>
