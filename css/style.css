@@ -306,7 +306,7 @@ img {
 	margin-bottom: 100px;
 }
 .button {
-	display: inline-block;
+	display: block;
 	font-weight: 700;
 	font-size: 20px;
 	text-align: center;
